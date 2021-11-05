@@ -1,0 +1,84 @@
+body {
+  user-select: none;
+  background: url(../assets/bg-s.jpeg) center center / cover no-repeat;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+}
+
+.box {
+  width: 600px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 10px;
+  padding: 12px;
+  animation: show_box 1s;
+}
+
+@keyframes show_box {
+  from {
+    transform: translateY(-15%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: #fff;
+}
+
+.content h2 {
+  font-size: 26px;
+  text-transform: uppercase;
+  border-left: 4px solid #fff;
+  padding-left: 1em;
+}
+
+.github {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.github .logo {
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+}
+
+.github a {
+  color: rgb(0, 136, 136);
+}
+
+.actions {
+  padding: 6px 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.actions button {
+  cursor: pointer;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.actions button.next {
+  background: rgb(0, 136, 136);
+}
